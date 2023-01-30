@@ -6,49 +6,46 @@ import Word from './components/Word'
 import Man from './components/Man'
 
 const wordBank = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+let guessedLetters: string[] = ['t', 's']
 
-//react function but in arrow notation vs function App() { return
-const RandomWord = () => {
-  //cosenWord is the state variable
-  const [chosenWord, setChosenWord] = useState('');
-
-  useEffect(() => {
-    setChosenWord(wordBank[Math.floor(Math.random() * wordBank.length)]); //setChosenWordTo:
-  }, []); //empty useEffect array means it only runs once on reload
-
-  return (
-    <div>
-      {chosenWord}
-    </div>
-  );
-};
 
 
 function App() {
+  const number = 1
   const [count, setCount] = useState(0)
-  let numberOfWrongGuesses: number = 0
+  const [numberOfWrongGuesses, setNumberOfWrongGuesses] = useState(0)
+  const [chosenWord, setChosenWord] = useState('');
+
+    useEffect(() => {
+      setChosenWord(wordBank[Math.floor(Math.random() * wordBank.length)]); //setChosenWordTo:
+    }, []); //empty useEffect array means it only runs once on reload
+
 
   const handleClick = () => {
     setCount((count) => count + 1)
     console.log({count})
-    // ifnot match selected word, increase number of wrong guesses
+    for (let i = 0; i < chosenWord.length; i++) {
+      if ("x" === chosenWord[i]) {
+        console.log('correct guess')
+      } else {
+        console.log('incorrect guess')
+        setNumberOfWrongGuesses((numberOfWrongGuesses) => numberOfWrongGuesses + 1) 
+      }
+    }
 
+      
   };
 
-  const handleCountIncrease = () => {
-    
-    // ifnot match selected word, increase number of wrong guesses
-
-  };
 
   return (
     <div>
-      <RandomWord />
-      <Man onWrongGuess = {handleClick}/>
-      <Word /> 
+      <Man numberOfGuesses ={ number }  />
+      <Word guessedLetters = { guessedLetters } chosenWord = {chosenWord}/> 
       <Keypad onClickButton = {handleClick}/> 
     </div>
   )
+
+
 }
 
 export default App
