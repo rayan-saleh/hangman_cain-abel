@@ -1,34 +1,35 @@
 import Keys from './Keys'
 
-function Keypad() {
+const Keypad = ({onClickButton}: any ) => {
     return (
         <>
         <div className="grid grid-cols-5 gap-4">
-            <Keys letter={'A'} />
-            <Keys letter={'B'} />
-            <Keys letter={'C'} />
-            <Keys letter={'D'} />
-            <Keys letter={'E'} />
-            <Keys letter={'F'} />
-            <Keys letter={'G'} />
-            <Keys letter={'H'} />
-            <Keys letter={'I'} />
-            <Keys letter={'J'} />
-            <Keys letter={'K'} />
-            <Keys letter={'L'} />
-            <Keys letter={'M'} />
-            <Keys letter={'N'} />
-            <Keys letter={'O'} />
-            <Keys letter={'P'} />
-            <Keys letter={'Q'} />
-            <Keys letter={'R'} />
-            <Keys letter={'S'} />
-            <Keys letter={'T'} />
-            <Keys letter={'V'} />
-            <Keys letter={'W'} />
-            <Keys letter={'X'} />
-            <Keys letter={'Y'} />
-            <Keys letter={'Z'} />
+            
+            <Keys letter={'A'} onClickButton = {onClickButton} />
+            <Keys letter={'B'} onClickButton = {onClickButton} />
+            <Keys letter={'C'} onClickButton = {onClickButton} />
+            <Keys letter={'D'} onClickButton = {onClickButton} />
+            <Keys letter={'E'} onClickButton = {onClickButton} />
+            <Keys letter={'F'} onClickButton = {onClickButton} />
+            <Keys letter={'G'} onClickButton = {onClickButton} />
+            <Keys letter={'H'} onClickButton = {onClickButton} />
+            <Keys letter={'I'} onClickButton = {onClickButton} />
+            <Keys letter={'J'} onClickButton = {onClickButton} />
+            <Keys letter={'K'} onClickButton = {onClickButton} />
+            <Keys letter={'L'} onClickButton = {onClickButton} />
+            <Keys letter={'M'} onClickButton = {onClickButton} />
+            <Keys letter={'N'} onClickButton = {onClickButton} />
+            <Keys letter={'O'} onClickButton = {onClickButton} />
+            <Keys letter={'P'} onClickButton = {onClickButton} />
+            <Keys letter={'Q'} onClickButton = {onClickButton} />
+            <Keys letter={'R'} onClickButton = {onClickButton} />
+            <Keys letter={'S'} onClickButton = {onClickButton} />
+            <Keys letter={'T'} onClickButton = {onClickButton} />
+            <Keys letter={'V'} onClickButton = {onClickButton} />
+            <Keys letter={'W'} onClickButton = {onClickButton} />
+            <Keys letter={'X'} onClickButton = {onClickButton} />
+            <Keys letter={'Y'} onClickButton = {onClickButton} />
+            <Keys letter={'Z'} onClickButton = {onClickButton} />
 
         </div>
         </>

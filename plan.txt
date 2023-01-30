@@ -11,6 +11,7 @@ man parts get added as you guess wrong (head, body, 2 arms, 2 legs) - 6 total
 
 Function
 word bank, choose randomly on refresh
+initially no man (hide all limbs), set word length to blanks
 letters that have been checked bank, dehighlight them on keypad
 if letter guessed matches a letter in the word, fill in the blanks (change hidden mode of the index/letter that it was
 
@@ -19,8 +20,8 @@ Components
 keypad DONE
 keys DONE
 letter DONE
-word
-man - man holds the state!
+word DONE
+man - man holds the state! DONE
 
 
 
